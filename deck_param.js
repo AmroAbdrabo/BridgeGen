@@ -27,14 +27,14 @@ p.Sk2.Name = "Sketch2";
 //Edges
 with (p.Sk2)
 {
-  p.Ln7 = Line(0.00000000, -10.00000000, 0.00000000, 10.00000000); // base of the deck (d3) 10 should be replaced by d3/2
-  p.Ln8 = Line(0.00000000, 10.00000000, 5.00000000, 10.00000000); // lower side of the deck (d4). 5 should be replaced by d4
-  p.Ln9 = Line(5.00000000, 10.00000000, 5.00000000, 20.00000000);  // side underbelly of deck. 20 should be replaced by d1/2
-  p.Ln10 = Line(5.00000000, 20.00000000, 10.00000000, 20.00000000); // d5. 10 should be replaced by 5 + d5 or d4 + d5
-  p.Ln11 = Line(10.00000000, 20.00000000, 10.00000000, -20.00000000); // 20 should be replaced by d1/2. 10 should be replaced by d4 + d5
-  p.Ln12 = Line(10.00000000, -20.00000000, 5.00000000, -20.00000000); // 20 should be replaced by d1/2 and 10 should be replaced by d4+d5 and 5 by d4 
-  p.Ln13 = Line(5.00000000, -20.00000000, 5.00000000, -10.00000000); // second y-coord should be d3/2 and 5 should be replaced by d4
-  p.Ln14 = Line(5.00000000, -10.00000000, 0.00000000, -10.00000000); // 
+  p.Ln7 = Line(0.00000000, -d32, 0.00000000, d32); // base of the deck (d3) 10 should be replaced by d3/2
+  p.Ln8 = Line(0.00000000, d32, d4, d32); // lower side of the deck (d4). 5 should be replaced by d4
+  p.Ln9 = Line(d4, d32, d4, d12);  // side underbelly of deck. 20 should be replaced by d1/2
+  p.Ln10 = Line(d4, d12, d4 + d5, d12); // d5. 10 should be replaced by 5 + d5 or d4 + d5
+  p.Ln11 = Line(d4 + d5, d12, d4 + d5, -d12); // 20 should be replaced by d1/2. 10 should be replaced by d4 + d5
+  p.Ln12 = Line(d4+d5, -d12, d4, -d12); // 20 should be replaced by d1/2 and 10 should be replaced by d4+d5 and 5 by d4 
+  p.Ln13 = Line(d4, -d12, d4, -d32); // second y-coord should be d3/2 and 5 should be replaced by d4
+  p.Ln14 = Line(d4, -d32, 0.00000000, -d32); // 
 }
 
 //Dimensions and/or constraints
@@ -58,7 +58,7 @@ return p;
 
 //Call Plane JScript function
 var ps1 = planeSketchesOnly (new Object());
-var ext1 = agb.Extrude(agc.Add, ps1.Sk2, agc.DirNormal, agc.ExtentFixed, 35.0, agc.ExtentFixed, 0.0, agc.No, 0.0, 0.0);
+var ext1 = agb.Extrude(agc.Add, ps1.Sk2, agc.DirNormal, agc.ExtentFixed, d6, agc.ExtentFixed, 0.0, agc.No, 0.0, 0.0);
 
 //Finish
 agb.Regen(); //To insure model validity
