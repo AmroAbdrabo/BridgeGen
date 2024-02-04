@@ -28,7 +28,7 @@ p.Sk2.Name = "Sketch2";
 with (p.Sk2)
 {
   p.Ln5 = Line(0.00000000, 0.8*d32, 0.00000000, -0.8*d32);
-  p.Ln5 = Line(0.00000000, -0.8*d32, 0.00000000 + 1, 0.8*d32);
+  p.Ln6 = Line(0.00000000, -0.8*d32, 0.00000000 + 1, -10);
 
   p.Ln7 = Line(0.00000000 + 1, -10.00000000, 0.00000000 + 1, 10.00000000); // base of the deck (d3) 10 should be replaced by d3/2
   p.Ln8 = Line(0.00000000 + 1, 10.00000000, 5.00000000 + 1, 10.00000000); // lower side of the deck (d4). 5 should be replaced by d4

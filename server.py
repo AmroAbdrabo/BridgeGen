@@ -153,14 +153,18 @@ p.Sk2.Name = "Sketch2";
 //Edges
 with (p.Sk2)
 {
-  p.Ln7 = Line(0.00000000, -d32, 0.00000000, d32); // base of the deck (d3) 10 should be replaced by d3/2
-  p.Ln8 = Line(0.00000000, d32, d4, d32); // lower side of the deck (d4). 5 should be replaced by d4
-  p.Ln9 = Line(d4, d32, d4, d12);  // side underbelly of deck. 20 should be replaced by d1/2
-  p.Ln10 = Line(d4, d12, d4 + d5, d12); // d5. 10 should be replaced by 5 + d5 or d4 + d5
-  p.Ln11 = Line(d4 + d5, d12, d4 + d5, -d12); // 20 should be replaced by d1/2. 10 should be replaced by d4 + d5
-  p.Ln12 = Line(d4+d5, -d12, d4, -d12); // 20 should be replaced by d1/2 and 10 should be replaced by d4+d5 and 5 by d4 
-  p.Ln13 = Line(d4, -d12, d4, -d32); // second y-coord should be d3/2 and 5 should be replaced by d4
-  p.Ln14 = Line(d4, -d32, 0.00000000, -d32); // 
+  p.Ln5 = Line(0.00000000, -0.8*d32, 0.00000000, 0.8*d32);
+  p.Ln6 = Line(0.00000000, 0.8*d32, 0.00000000 + 1, d32);
+
+  //p.Ln7 = Line(0.00000000 + 1, -d32, 0.00000000 + 1, d32); // base of the deck (d3) 10 should be replaced by d3/2
+  p.Ln8 = Line(0.00000000 + 1, d32, d4 + 1, d32); // lower side of the deck (d4). 5 should be replaced by d4
+  p.Ln9 = Line(d4 + 1, d32, d4 + 1, d12);  // side underbelly of deck. 20 should be replaced by d1/2
+  p.Ln10 = Line(d4 + 1, d12, d4 + d5 + 1, d12); // d5. 10 should be replaced by 5 + d5 or d4 + d5
+  p.Ln11 = Line(d4 + d5 + 1, d12, d4 + d5 + 1, -d12); // 20 should be replaced by d1/2. 10 should be replaced by d4 + d5
+  p.Ln12 = Line(d4+d5 + 1, -d12, d4 + 1, -d12); // 20 should be replaced by d1/2 and 10 should be replaced by d4+d5 and 5 by d4 
+  p.Ln13 = Line(d4 + 1, -d12, d4 + 1, -d32); // second y-coord should be d3/2 and 5 should be replaced by d4
+  p.Ln14 = Line(d4 + 1, -d32, 0.00000000 + 1, -d32); // 
+  p.Ln4 = Line(0.00000000 + 1, -d32, 0.00000000, -0.8*d32); // 
 }
 
 //Dimensions and/or constraints
@@ -171,8 +175,8 @@ with (p.Plane)
   HorizontalCon(p.Ln10);
   HorizontalCon(p.Ln12);
   HorizontalCon(p.Ln14);
-  VerticalCon(p.Ln7);
-  VerticalCon(p.Ln9);
+  //VerticalCon(p.Ln7);
+  //VerticalCon(p.Ln9);
   VerticalCon(p.Ln11);
   VerticalCon(p.Ln13);
 }
