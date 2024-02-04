@@ -15,18 +15,18 @@ p.Sk2.Name = "Sketch2";
 //Edges
 with (p.Sk2)
 {
-  p.Ln5 = Line(0.00000000, -0.8*10.0, 0.00000000, 0.8*10.0);
-  p.Ln6 = Line(0.00000000, 0.8*10.0, 0.00000000 + 1, 10.0);
+  p.Ln5 = Line(0.00000000, -0.8*20.0, 0.00000000, 0.8*20.0);
+  p.Ln6 = Line(0.00000000, 0.8*20.0, 0.00000000 + 1, 20.0);
 
-  //p.Ln7 = Line(0.00000000 + 1, -10.0, 0.00000000 + 1, 10.0); // base of the deck (20.0) 10 should be replaced by 20.0/2
-  p.Ln8 = Line(0.00000000 + 1, 10.0, 4.0 + 1, 10.0); // lower side of the deck (4.0). 5 should be replaced by 4.0
-  p.Ln9 = Line(4.0 + 1, 10.0, 8.0 - 3.0 + 1, 20.0);  // side underbelly of deck. 20 should be replaced by 40.0/2
-  p.Ln10 = Line(8.0 - 3.0 + 1, 20.0, 8.0 + 1, 20.0); // 3.0. 10 should be replaced by 5 + 3.0 or 4.0 + 3.0
-  p.Ln11 = Line(8.0 + 1, 20.0, 8.0 + 1, -20.0); // 20 should be replaced by 40.0/2. 10 should be replaced by 4.0 + 3.0
-  p.Ln12 = Line(8.0 + 1, -20.0, 8.0 - 3.0 + 1, -20.0); // 20 should be replaced by 40.0/2 and 10 should be replaced by 4.0+3.0 and 5 by 4.0 
-  p.Ln13 = Line(8.0 - 3.0 + 1, -20.0, 4.0 + 1, -10.0); // second y-coord should be 20.0/2 and 5 should be replaced by 4.0
-  p.Ln14 = Line(4.0 + 1, -10.0, 0.00000000 + 1, -10.0); // 
-  p.Ln4 = Line(0.00000000 + 1, -10.0, 0.00000000, -0.8*10.0); // 
+  //p.Ln7 = Line(0.00000000 + 1, -20.0, 0.00000000 + 1, 20.0); // base of the deck (40.0) 10 should be replaced by 40.0/2
+  p.Ln8 = Line(0.00000000 + 1, 20.0, 3.0 + 1, 20.0); // lower side of the deck (3.0). 5 should be replaced by 3.0
+  p.Ln9 = Line(3.0 + 1, 20.0, 7.0 - 2.0 + 1, 30.0);  // side underbelly of deck. 20 should be replaced by 60.0/2
+  p.Ln10 = Line(7.0 - 2.0 + 1, 30.0, 7.0 + 1, 30.0); // 2.0. 10 should be replaced by 5 + 2.0 or 3.0 + 2.0
+  p.Ln11 = Line(7.0 + 1, 30.0, 7.0 + 1, -30.0); // 20 should be replaced by 60.0/2. 10 should be replaced by 3.0 + 2.0
+  p.Ln12 = Line(7.0 + 1, -30.0, 7.0 - 2.0 + 1, -30.0); // 20 should be replaced by 60.0/2 and 10 should be replaced by 3.0+2.0 and 5 by 3.0 
+  p.Ln13 = Line(7.0 - 2.0 + 1, -30.0, 3.0 + 1, -20.0); // second y-coord should be 40.0/2 and 5 should be replaced by 3.0
+  p.Ln14 = Line(3.0 + 1, -20.0, 0.00000000 + 1, -20.0); // 
+  p.Ln4 = Line(0.00000000 + 1, -20.0, 0.00000000, -0.8*20.0); // 
 }
 
 //Dimensions and/or constraints
@@ -50,7 +50,7 @@ return p;
 
 //Call Plane JScript function
 var ps1 = planeSketchesOnly (new Object());
-var ext1 = agb.Extrude(agc.Add, ps1.Sk2, agc.DirNormal, agc.ExtentFixed, 80.0, agc.ExtentFixed, 0.0, agc.No, 0.0, 0.0);
+var ext1 = agb.Extrude(agc.Add, ps1.Sk2, agc.DirNormal, agc.ExtentFixed, 200.0, agc.ExtentFixed, 0.0, agc.No, 0.0, 0.0);
 
 //Finish
 agb.Regen(); //To insure model validity
