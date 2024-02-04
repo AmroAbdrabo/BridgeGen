@@ -20,11 +20,11 @@ with (p.Sk2)
 
   //p.Ln7 = Line(0.00000000 + 1, -10.0, 0.00000000 + 1, 10.0); // base of the deck (20.0) 10 should be replaced by 20.0/2
   p.Ln8 = Line(0.00000000 + 1, 10.0, 5.0 + 1, 10.0); // lower side of the deck (5.0). 5 should be replaced by 5.0
-  p.Ln9 = Line(5.0 + 1, 10.0, 5.0 + 1, 20.0);  // side underbelly of deck. 20 should be replaced by 40.0/2
-  p.Ln10 = Line(5.0 + 1, 20.0, 5.0 + 5.0 + 1, 20.0); // 5.0. 10 should be replaced by 5 + 5.0 or 5.0 + 5.0
-  p.Ln11 = Line(5.0 + 5.0 + 1, 20.0, 5.0 + 5.0 + 1, -20.0); // 20 should be replaced by 40.0/2. 10 should be replaced by 5.0 + 5.0
-  p.Ln12 = Line(5.0+5.0 + 1, -20.0, 5.0 + 1, -20.0); // 20 should be replaced by 40.0/2 and 10 should be replaced by 5.0+5.0 and 5 by 5.0 
-  p.Ln13 = Line(5.0 + 1, -20.0, 5.0 + 1, -10.0); // second y-coord should be 20.0/2 and 5 should be replaced by 5.0
+  p.Ln9 = Line(5.0 + 1, 10.0, 10.0 - 4.0 + 1, 20.0);  // side underbelly of deck. 20 should be replaced by 40.0/2
+  p.Ln10 = Line(10.0 - 4.0 + 1, 20.0, 10.0 + 1, 20.0); // 4.0. 10 should be replaced by 5 + 4.0 or 5.0 + 4.0
+  p.Ln11 = Line(10.0 + 1, 20.0, 10.0 + 1, -20.0); // 20 should be replaced by 40.0/2. 10 should be replaced by 5.0 + 4.0
+  p.Ln12 = Line(10.0 + 1, -20.0, 10.0 - 4.0 + 1, -20.0); // 20 should be replaced by 40.0/2 and 10 should be replaced by 5.0+4.0 and 5 by 5.0 
+  p.Ln13 = Line(10.0 - 4.0 + 1, -20.0, 5.0 + 1, -10.0); // second y-coord should be 20.0/2 and 5 should be replaced by 5.0
   p.Ln14 = Line(5.0 + 1, -10.0, 0.00000000 + 1, -10.0); // 
   p.Ln4 = Line(0.00000000 + 1, -10.0, 0.00000000, -0.8*10.0); // 
 }
@@ -38,9 +38,9 @@ with (p.Plane)
   HorizontalCon(p.Ln12);
   HorizontalCon(p.Ln14);
   //VerticalCon(p.Ln7);
-  VerticalCon(p.Ln9);
+  //VerticalCon(p.Ln9);
   VerticalCon(p.Ln11);
-  VerticalCon(p.Ln13);
+  //VerticalCon(p.Ln13);
 }
 
 p.Plane.EvalDimCons(); //Final evaluate of all dimensions and constraints in plane
