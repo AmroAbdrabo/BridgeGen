@@ -306,10 +306,10 @@ def create_and_download():
     txt = txt.replace("d5", d5)
     txt = txt.replace("d6", d6)
 
-    with open('hello.js', 'w') as f:
+    with open('deck.js', 'w') as f:
         f.write(f'{txt}')
     
-    return send_file('hello.js', as_attachment=True, download_name='hello.js')
+    return send_file('deck.js', as_attachment=True, download_name='deck.js')
 
 
 @app.route('/create-and-download-base', methods=['POST'])
@@ -335,10 +335,10 @@ def create_and_download_base():
     txt = base_params.replace("d32",d32)
     txt = txt.replace("d64", d64)
 
-    with open('hellob.js', 'w') as f:
+    with open('base.js', 'w') as f:
         f.write(f'{txt}')
     
-    return send_file('hellob.js', as_attachment=True, download_name='hellob.js')
+    return send_file('base.js', as_attachment=True, download_name='base.js')
 
 if __name__ == '__main__':
     app.run(debug=True)
