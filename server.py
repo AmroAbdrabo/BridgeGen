@@ -69,7 +69,7 @@ HTML_TEMPLATE = '''
                 const url = window.URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = 'hello.js';
+                a.download = 'parametrized_deck.js';
                 document.body.appendChild(a); // Append the anchor to body
                 a.click(); // Simulate click to download file
                 document.body.removeChild(a); // Clean up
@@ -85,7 +85,7 @@ HTML_TEMPLATE = '''
             const d4 = document.getElementById('d4').value;
             const d5 = document.getElementById('d5').value;
             const d6 = document.getElementById('d6').value;
-            fetch('/create-and-download', {
+            fetch('/create-and-download-base', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ HTML_TEMPLATE = '''
                 const url = window.URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = 'hello2.js';
+                a.download = 'parametrized_base.js';
                 document.body.appendChild(a); // Append the anchor to body
                 a.click(); // Simulate click to download file
                 document.body.removeChild(a); // Clean up
@@ -208,30 +208,30 @@ p.Sk2.Name = "Sketch3";
 //Edges
 with (p.Sk2)
 {
-  p.Ln15 = Line(-0.8*d3, 0.00000000, 0.8*d3, 0.00000000);
-  p.Ln16 = Line(0.8*d3, 0.00000000, 0.8*d3, 2.00000000);
-  p.Ln17 = Line(0.8*d3, 2.00000000, -0.8*d3, 2.00000000);
-  p.Ln18 = Line(-0.8*d3, 2.00000000, -0.8*d3, 0.00000000);
+  p.Ln15 = Line(-0.8*d32, 0.00000000, 0.8*d32, 0.00000000);
+  p.Ln16 = Line(0.8*d32, 0.00000000, 0.8*d32, 2.00000000);
+  p.Ln17 = Line(0.8*d32, 2.00000000, -0.8*d32, 2.00000000);
+  p.Ln18 = Line(-0.8*d32, 2.00000000, -0.8*d32, 0.00000000);
 
-  p.Ln19 = Line(0.8*d3, d64, -0.8*d3, d64);
-  p.Ln20 = Line(-0.8*d3, d64, -0.8*d3, d64 + 2);
-  p.Ln21 = Line(-0.8*d3, d64 + 2, 0.8*d3, d64 + 2);
-  p.Ln22 = Line(0.8*d3, d64 + 2, 0.8*d3, d64);
+  p.Ln19 = Line(0.8*d32, d64, -0.8*d32, d64);
+  p.Ln20 = Line(-0.8*d32, d64, -0.8*d32, d64 + 2);
+  p.Ln21 = Line(-0.8*d32, d64 + 2, 0.8*d32, d64 + 2);
+  p.Ln22 = Line(0.8*d32, d64 + 2, 0.8*d32, d64);
 
-  p.Ln39 = Line(0.8*d3, 2*d64, -0.8*d3, 2*d64);
-  p.Ln40 = Line(-0.8*d3, 2*d64, -0.8*d3, 2*d64 + 2);
-  p.Ln41 = Line(-0.8*d3, 2*d64 + 2, 0.8*d3, 2*d64 + 2);
-  p.Ln42 = Line( 0.8*d3, 2*d64 + 2,  0.8*d3, 2*d64);
+  p.Ln39 = Line(0.8*d32, 2*d64, -0.8*d32, 2*d64);
+  p.Ln40 = Line(-0.8*d32, 2*d64, -0.8*d32, 2*d64 + 2);
+  p.Ln41 = Line(-0.8*d32, 2*d64 + 2, 0.8*d32, 2*d64 + 2);
+  p.Ln42 = Line( 0.8*d32, 2*d64 + 2,  0.8*d32, 2*d64);
 
-  p.Ln43 = Line(0.8*d3, 3*d64, -0.8*d3, 3*d64);
-  p.Ln44 = Line(-0.8*d3, 3*d64, -0.8*d3, 3*d64 + 2);
-  p.Ln45 = Line(-0.8*d3, 3*d64 + 2, 0.8*d3, 3*d64 + 2);
-  p.Ln46 = Line( 0.8*d3, 3*d64 + 2,  0.8*d3, 3*d64);
+  p.Ln43 = Line(0.8*d32, 3*d64, -0.8*d32, 3*d64);
+  p.Ln44 = Line(-0.8*d32, 3*d64, -0.8*d32, 3*d64 + 2);
+  p.Ln45 = Line(-0.8*d32, 3*d64 + 2, 0.8*d32, 3*d64 + 2);
+  p.Ln46 = Line( 0.8*d32, 3*d64 + 2,  0.8*d32, 3*d64);
 
-  p.Ln47 = Line(0.8*d3,  4*d64 - 2, -0.8*d3, 4*d64 - 2);
-  p.Ln48 = Line(-0.8*d3, 4*d64 - 2, -0.8*d3, 4*d64);
-  p.Ln49 = Line(-0.8*d3, 4*d64, 0.8*d3, 4*d64);
-  p.Ln50 = Line( 0.8*d3, 4*d64,  0.8*d3, 4*d64 - 2);
+  p.Ln47 = Line(0.8*d32,  4*d64 - 2, -0.8*d32, 4*d64 - 2);
+  p.Ln48 = Line(-0.8*d32, 4*d64 - 2, -0.8*d32, 4*d64);
+  p.Ln49 = Line(-0.8*d32, 4*d64, 0.8*d32, 4*d64);
+  p.Ln50 = Line( 0.8*d32, 4*d64,  0.8*d32, 4*d64 - 2);
 
 }
 
@@ -307,6 +307,34 @@ def create_and_download():
     
     return send_file('hello.js', as_attachment=True, download_name='hello.js')
 
+
+@app.route('/create-and-download-base', methods=['POST'])
+def create_and_download_base():
+    data = request.get_json()  # Get data sent via AJAX
+    
+    d1 = float(data['d1'])
+    d2 = float(data['d2'])
+    d3 = float(data['d3'])
+    d4 = float(data['d4'])
+    d5 = float(data['d5'])
+    d6 = float(data['d6'])
+
+    d64= str(d6/4)
+    d32 = str(d3/2)
+    d1 = str(d1)
+    d2 = str(d2)
+    d3 = str(d3)
+    d4 = str(d4)
+    d5 = str(d5)
+    d6 = str(d6)
+
+    txt = base_params.replace("d32",d32)
+    txt = txt.replace("d64", d64)
+
+    with open('hellob.js', 'w') as f:
+        f.write(f'{txt}')
+    
+    return send_file('hellob.js', as_attachment=True, download_name='hellob.js')
 
 if __name__ == '__main__':
     app.run(debug=True)

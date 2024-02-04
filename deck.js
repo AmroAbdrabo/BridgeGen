@@ -27,14 +27,17 @@ p.Sk2.Name = "Sketch2";
 //Edges
 with (p.Sk2)
 {
-  p.Ln7 = Line(0.00000000, -10.00000000, 0.00000000, 10.00000000); // base of the deck (d3) 10 should be replaced by d3/2
-  p.Ln8 = Line(0.00000000, 10.00000000, 5.00000000, 10.00000000); // lower side of the deck (d4). 5 should be replaced by d4
-  p.Ln9 = Line(5.00000000, 10.00000000, 5.00000000, 20.00000000);  // side underbelly of deck. 20 should be replaced by d1/2
-  p.Ln10 = Line(5.00000000, 20.00000000, 10.00000000, 20.00000000); // d5. 10 should be replaced by 5 + d5 or d4 + d5
-  p.Ln11 = Line(10.00000000, 20.00000000, 10.00000000, -20.00000000); // 20 should be replaced by d1/2. 10 should be replaced by d4 + d5
-  p.Ln12 = Line(10.00000000, -20.00000000, 5.00000000, -20.00000000); // 20 should be replaced by d1/2 and 10 should be replaced by d4+d5 and 5 by d4 
-  p.Ln13 = Line(5.00000000, -20.00000000, 5.00000000, -10.00000000); // second y-coord should be d3/2 and 5 should be replaced by d4
-  p.Ln14 = Line(5.00000000, -10.00000000, 0.00000000, -10.00000000); // 
+  p.Ln5 = Line(0.00000000, 0.8*d32, 0.00000000, -0.8*d32);
+  p.Ln5 = Line(0.00000000, -0.8*d32, 0.00000000 + 1, 0.8*d32);
+
+  p.Ln7 = Line(0.00000000 + 1, -10.00000000, 0.00000000 + 1, 10.00000000); // base of the deck (d3) 10 should be replaced by d3/2
+  p.Ln8 = Line(0.00000000 + 1, 10.00000000, 5.00000000 + 1, 10.00000000); // lower side of the deck (d4). 5 should be replaced by d4
+  p.Ln9 = Line(5.00000000 + 1, 10.00000000, 5.00000000 + 1, 20.00000000);  // side underbelly of deck. 20 should be replaced by d1/2
+  p.Ln10 = Line(5.00000000 + 1, 20.00000000, 10.00000000 + 1, 20.00000000); // d5. 10 should be replaced by 5 + d5 or d4 + d5
+  p.Ln11 = Line(10.00000000 + 1, 20.00000000, 10.00000000 + 1, -20.00000000); // 20 should be replaced by d1/2. 10 should be replaced by d4 + d5
+  p.Ln12 = Line(10.00000000 + 1, -20.00000000, 5.00000000 + 1, -20.00000000); // 20 should be replaced by d1/2 and 10 should be replaced by d4+d5 and 5 by d4 
+  p.Ln13 = Line(5.00000000 + 1, -20.00000000, 5.00000000 + 1, -10.00000000); // second y-coord should be d3/2 and 5 should be replaced by d4
+  p.Ln14 = Line(5.00000000 + 1, -10.00000000, 0.00000000 + 1, -10.00000000); // 
 }
 
 //Dimensions and/or constraints
